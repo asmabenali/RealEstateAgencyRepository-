@@ -1,0 +1,30 @@
+visite:
+    path:     /
+    defaults: { _controller: "FrontRealBundle:Visite:index" }
+
+visite_show:
+    path:     /{id}/show
+    defaults: { _controller: "FrontRealBundle:Visite:show" }
+
+visite_new:
+    path:     /new
+    defaults: { _controller: "FrontRealBundle:Visite:new" }
+
+visite_create:
+    path:     /create
+    defaults: { _controller: "FrontRealBundle:Visite:create" }
+    requirements: { _method: post }
+
+visite_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "FrontRealBundle:Visite:edit" }
+
+visite_update:
+    path:     /{id}/update
+    defaults: { _controller: "FrontRealBundle:Visite:update" }
+    requirements: { _method: post|put }
+
+visite_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "FrontRealBundle:Visite:delete" }
+    requirements: { _method: post|delete }

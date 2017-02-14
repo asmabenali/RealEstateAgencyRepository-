@@ -1,0 +1,96 @@
+{% extends '::base.html.twig' %}
+
+{% block body -%}
+    <h1>Offre</h1>
+
+    <table class="record_properties">
+        <tbody>
+            <tr>
+                <th>Idoffre</th>
+                <td>{{ entity.idOffre }}</td>
+            </tr>
+            <tr>
+                <th>Nature</th>
+                <td>{{ entity.nature }}</td>
+            </tr>
+            <tr>
+                <th>Typeimmob</th>
+                <td>{{ entity.typeimmob }}</td>
+            </tr>
+            <tr>
+                <th>Prix</th>
+                <td>{{ entity.prix }}</td>
+            </tr>
+            <tr>
+                <th>Superficie</th>
+                <td>{{ entity.superficie }}</td>
+            </tr>
+            <tr>
+                <th>Nbrpiece</th>
+                <td>{{ entity.nbrpiece }}</td>
+            </tr>
+            <tr>
+                <th>Datepublication</th>
+                <td>{{ entity.datepublication|date('Y-m-d H:i:s') }}</td>
+            </tr>
+            <tr>
+                <th>Etage</th>
+                <td>{{ entity.etage }}</td>
+            </tr>
+            <tr>
+                <th>Surfacecouverte</th>
+                <td>{{ entity.surfaceCouverte }}</td>
+            </tr>
+            <tr>
+                <th>Nbrsalledb</th>
+                <td>{{ entity.nbrSalleDb }}</td>
+            </tr>
+            <tr>
+                <th>Gazdeville</th>
+                <td>{{ entity.gazdeville }}</td>
+            </tr>
+            <tr>
+                <th>Jardin</th>
+                <td>{{ entity.jardin }}</td>
+            </tr>
+            <tr>
+                <th>Chauffage</th>
+                <td>{{ entity.chauffage }}</td>
+            </tr>
+            <tr>
+                <th>Meuble</th>
+                <td>{{ entity.meuble }}</td>
+            </tr>
+            <tr>
+                <th>Climatisation</th>
+                <td>{{ entity.climatisation }}</td>
+            </tr>
+            <tr>
+                <th>Note</th>
+                <td>{{ entity.note }}</td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>{{ entity.description }}</td>
+            </tr>
+            <tr>
+                <th>Url</th>
+                <td>{{ entity.url }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+        <ul class="record_actions">
+    <li>
+        <a href="{{ path('offre') }}">
+            Back to the list
+        </a>
+    </li>
+    <li>
+        <a href="{{ path('offre_edit', { 'id': entity.idOffre }) }}">
+            Edit
+        </a>
+    </li>
+    <li>{{ form(delete_form) }}</li>
+</ul>
+{% endblock %}

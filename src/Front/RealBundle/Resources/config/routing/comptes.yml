@@ -1,0 +1,30 @@
+comptes:
+    path:     /
+    defaults: { _controller: "FrontRealBundle:Comptes:index" }
+
+comptes_show:
+    path:     /{id}/show
+    defaults: { _controller: "FrontRealBundle:Comptes:show" }
+
+comptes_new:
+    path:     /new
+    defaults: { _controller: "FrontRealBundle:Comptes:new" }
+
+comptes_create:
+    path:     /create
+    defaults: { _controller: "FrontRealBundle:Comptes:create" }
+    requirements: { _method: post }
+
+comptes_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "FrontRealBundle:Comptes:edit" }
+
+comptes_update:
+    path:     /{id}/update
+    defaults: { _controller: "FrontRealBundle:Comptes:update" }
+    requirements: { _method: post|put }
+
+comptes_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "FrontRealBundle:Comptes:delete" }
+    requirements: { _method: post|delete }

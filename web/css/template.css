@@ -1,0 +1,213 @@
+/* =================================================
+      Modules and widgets
+   ================================================= */
+
+/* Modules */
+
+.block-separator { display:block; margin:0 10px; height:20px; overflow:hidden; zoom:1; }
+
+.mod { margin:10px; }
+.mod-clean { margin:0 10px; }
+.mod-h { margin:10px; padding:0; }
+
+.mod-bevel { border-style:solid; border-width:1px; margin:9px; }
+.mod-bevel .inner { border-style:solid; border-width:1px; padding:9px; }
+
+.hd-bar .inner  { border:0; background:none; padding:0; }
+.hd-bar .hd { border-style:solid; border-width:1px; border-bottom:0; padding: 0px 9px; }
+.hd-bar .hd h1, .hd-bar .hd h2, .hd-bar .hd h3, .hd-bar .hd h4, .hd-bar .hd h5, .hd-bar .hd h6 { margin-bottom:0; font-weight:normal; }
+.hd-bar .bd { border-style:solid; border-width:1px; border-top:0; padding:9px; }
+
+.talk .inner  { border:0; background:none; padding:0; }
+.talk .bd { border-style:solid; border-width:1px; border-bottom:0; padding:9px; padding-left:59px; font-style:italic; font-weight:bold }
+.talk .ft { border-style:solid; border-width:1px; border-top:0; padding: 0px 9px; }
+.talk .ft .author { display:block; margin-bottom:0; padding:15px 0 5px 0; text-align:right; font-weight:bold }
+
+.cols-2, .cols-3, .cols-4 { width:100%; }
+.cols-2 .col { float:left; width:50%; }
+.cols-3 .col { float:left; width:33.3%; }
+.cols-4 .col { float:left; width:25%; }
+.cols-2 .col-inner, .cols-3 .col-inner, .cols-4 .col-inner { margin-left:10px; margin-right:10px; }
+.cols-2 .gt-r .col-inner, .cols-3 .gt-r .col-inner, .cols-4 .gt-r .col-inner { margin-right:10px; }
+.cols-2 .gt-l .col-inner, .cols-3 .gt-l .col-inner, .cols-4 .gt-l .col-inner { margin-left:10px; }
+.mod-cols .hd { padding-left:10px; padding-right:10px; }
+.mod-cols-clean, .mod-cols-clean .hd, .mod-cols-clean .col-inner { margin:0; padding:0; }
+
+.mod-fullwidth { margin-left:0; margin-right:0; margin-top:0; margin-bottom:9px; } /* for nested modules */
+
+/* Portfolio gallery */
+
+.portfolio-item .bd img { display:block; }
+.gallery-item .inner img { display:block; }
+.gallery-item .inner { min-height:258px; }
+.gallery-item a:hover { border-bottom:0; }
+
+/* Portfolio single */
+
+.portfolio-block .inner { min-height:337px; }
+.portfolio-block .bd img { display:block; }
+
+/* Breadcrumbs */
+
+.breadcrumb .inner { padding:0; }
+.breadcrumb ul { list-style:none; margin:0; padding:0; }
+.breadcrumb li { display:block; margin:0; float:left; padding:4px 20px 4px 10px; }
+
+/* Buttons */
+
+.btn { display:inline-block; position:relative; cursor:pointer; position:relative; overflow:hidden; zoom:1; }
+.btn .left { display:inline-block; float:left; width:5px; }
+.btn .right { display:inline-block; float:left; text-align:center; }
+.btn:hover { border:0; text-decoration:none; }
+
+.btn-small-normal, .btn-small-special, .btn-small-neutral { margin-bottom:-7px; }
+.btn-small-normal .left, .btn-small-special .left, .btn-small-neutral .left { height:22px; }
+.btn-small-normal .right, .btn-small-special .right, .btn-small-neutral .right { font-size:10px; line-height:20px; height:22px; padding:0 10px 0 5px; font-weight:bold; }
+
+.btn-medium-normal, .btn-medium-special, .btn-medium-neutral { margin-bottom:-17px; }
+.btn-medium-normal .left, .btn-medium-special .left, .btn-medium-neutral .left { height:42px; }
+.btn-medium-normal .right, .btn-medium-special .right, .btn-medium-neutral .right { font-size:12px; line-height:40px; height:42px; padding:0 10px 0 5px; font-weight:bold; }
+
+.btn-large-normal, .btn-large-special, .btn-large-neutral { margin-bottom:-6px; }
+.btn-large-normal .left, .btn-large-special .left, .btn-large-neutral .left { height:82px; }
+.btn-large-normal .right, .btn-large-special .right, .btn-large-neutral .right { font-size:12px; line-height:24px; height:54px; padding:18px 20px 10px 15px; font-weight:bold; }
+
+.btn-margin { margin-bottom:18px; }
+.btn-margin-small { margin-bottom:3px; }
+
+.btn-fullwidth { width:100%; display:block }
+.btn-fullwidth .right { display:block; float:none; margin-left:5px; }
+
+/* Messages */
+
+.message { display:block; padding:10px 10px 10px 55px; margin-bottom:20px; border-width:1px; border-style:solid; }
+
+/* Slider */
+
+.slider .top { display:block; height:5px; overflow:hidden; zoom:1; }
+.slider .bottom { display:block; height:20px; overflow:hidden; zoom:1; }
+.slider .prev-slide, .slider .next-slide { display:inline-block; width:20px; height:95px; position:absolute; top:20px; cursor: pointer; }
+.slider .nav-buttons { height:20px; position:relative; }
+.slider .nav-buttons .inner { height:20px; position:absolute; }
+.slider .nav-buttons .nav-btn { display:block; width:20px; height:20px; cursor: pointer; float:left }
+.slider .prev-slide { left:-20px; } .slider .next-slide { left:940px; }
+.slider .slider-inner { border-width:0 2px; border-style:solid; width:936px; padding:0; position:relative; zoom:1; }
+.slider .slides { height:250px; width:936px; position:relative; overflow:auto; zoom:1 }
+.slider .slide { width:936px; position:relative; }
+.slider .mod-cols { margin:20px 10px 20px 10px; }
+.slider h2{ font-size: 32px; line-height: 40px; margin-bottom: 40px; }
+
+.slider-active .slides { overflow:hidden; }
+.slider-active .slide { float:left; overflow:hidden; zoom:1; }
+
+
+/* Main navigation */
+
+.main-nav .inner { overflow:hidden; zoom:1; }
+.main-nav ul, .main-nav-sub ul { margin:0; padding:0; position:relative; }
+.main-nav li, .main-nav-sub li { margin:0; padding:0; list-style:none; position:relative; }
+.main-nav a, .main-nav-root a, .main-nav-sub a { outline:none; }
+.main-nav ul.sub { display:none }
+
+.main-nav-root ul { display:inline-block; float:right; }
+.main-nav-root .root-item { display:inline; padding:0 15px; float:left; }
+.main-nav-root .root-item-first { padding-left:0; }
+.main-nav-root .root-item-last { padding-right:0; }
+.main-nav-root a.root { display:inline-block; height:40px; padding:0; font-weight:bold; }
+.main-nav-root .current a.root {  }
+.main-nav-root a.root:hover, .main-nav-root .item-hover a.root { text-decoration:none; }
+
+.main-nav .main-nav-sub { position:absolute; visibility:hidden; }
+.main-nav-sub { position:absolute; display:block; width:160px; border-width:1px; border-style:solid; }
+.main-nav-sub .inner { border-style:solid; border-width:1px; padding:9px; }
+.main-nav-sub li { border-bottom-width:1px; border-top-width:1px; border-bottom-style:solid; border-top-style:solid; display:block; overflow:hidden; }
+.main-nav-sub li.first { border-top:none; }
+.main-nav-sub li.last { border-bottom:none; }
+.main-nav-sub a, .main-nav-sub .item-hover a { display:block; height:100%; border:0; padding:0 10px;  }
+.main-nav-sub a:hover { text-decoration:none; }
+
+
+/* Post comments */
+
+ol.commentlist, ol.commentlist ul.children, li.comment { list-style:none; margin:0; padding:0; }
+ol.commentlist ul.children { padding-left:40px; }
+.comment-box { overflow:hidden; zoom:1; }
+.comment-box.hd-bar .hd { padding:5px 10px; }
+.comment-author { font-weight:bold; }
+.comment-date { font-weight:bold; position:absolute; top:5px; right:10px; }
+.comment-text { border-width:1px; border-style:solid; margin:0 0 5px 75px; padding:10px; overflow:hidden; zoom:1; }
+.comment-avatar { position:absolute; top:10px; left:10px; }
+
+
+/* Pagination */
+
+.pagination { overflow:hidden; zoom:1; padding:5px 0 15px 0; }
+.pagination a, .pagination .current { display:block; float:left; margin-right:3px; padding:2px 7px; text-decoration:none; font-weight:bold; border-width:1px; border-style:solid; }
+
+
+/* Posts */
+
+.post-meta { margin-bottom:10px; }
+.post-meta ul li, .post-meta ul li.first { padding-left:20px; }
+.content-separator { display:block; height:0; }
+
+/* Twitter box */
+
+.twitter-box .hd h3 { width:200px; }
+.twitter-box .hd .follow-btn { position:absolute; top:10px; right:10px; }
+.twitter-box .bd a { display:inline; }
+.twitter-box .bd a:hover, .twitter-box .bd a:active { background:none !important; text-decoration:underline !important; }
+
+
+/* =================================================
+      Document layout
+   ================================================= */
+
+/*** Main document sections ***/
+
+.doc-bd { padding:5px 0; }
+div#doc-hd-upper { border-bottom-style:solid; border-bottom-width:2px; padding:4px 0; }
+div#doc-hd-lower {  }
+div#doc-bd {  }
+div#doc-ft-upper { border-top-style:solid; border-top-width:5px; padding:10px 0; }
+div#doc-ft-lower { border-top-style:solid; border-top-width:1px; padding:4px 0; }
+
+
+/*** Layout elements ***/
+
+div#doc-hd-upper .icon img { position:relative; top:3px }
+
+div#branding { height:60px; }
+
+#main-slider-block { overflow:visible; }
+#slider-main #slide-1 .col-1 { width:388px; }
+#slider-main #slide-1 .col-2 { width:548px; }
+#slider-main #slide-1 .col-1 .mod { padding:10px }
+
+/* Sidebar ads */
+ul.advertising { margin:0; padding:0; }
+ul.advertising li { list-style:none; margin:0; padding:0; float:left; display:inline; }
+ul.advertising li a { display:block; padding:2px; margin:4px; border-width:1px; border-style:solid; }
+ul.advertising li img { display:block; }
+
+/* Search form */
+div#search .inner { position:relative; height:30px; }
+div#search #search-field { width:184px; height:14px; float:right; position:absolute; top:0; right:20px; }
+div#search #search-btn { margin:0; padding:0; width:20px; height:30px; cursor:pointer; outline:none; border:none; text-indent: -9999px; position:absolute; top:0; right:0; }
+
+/* Post author box */
+.author-box .content { padding-left:135px }
+.author-box .author-photo { position:absolute; top:10px; }
+
+/* Comments block */
+#comments-block #add-comment-btn-wrap { position:absolute; right:10px; top:10px; height:40px; }
+#comment-form input.text, #comment-form textarea { width:343px; }
+
+
+/* Contact Form */
+
+.error { color:#B03333; }
+
+/* Fixes */
+
+b.uncollapse-margins { display:block; height:10px; margin-bottom:-10px; overflow:hidden; zoom:1; }

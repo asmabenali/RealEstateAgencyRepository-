@@ -1,0 +1,96 @@
+html, body { height:100%; }
+body, label, legend, input, textarea, select, option { font-family: Verdana, 'Verdana Ref', sans-serif; }
+
+hr { display: block; border:0; height: 0; line-height: 0; margin:0; padding: 0; }
+b.hr { border-top-style: solid; display:block; }
+
+/* Headings */
+h1, h2, h3, h4, h5, .font-narrow { font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; font-weight: bold; }
+h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover, h1 a:active, h2 a:active, h3 a:active, h4 a:active, h5 a:active, h6 a:active { text-decoration:none; }
+
+h1.u-line, h2.u-line, h3.u-line, h4.u-line, h5.u-line, h6.u-line,
+h1.asym-u-line, h2.asym-u-line, h3.asym-u-line, h4.asym-u-line, h5.asym-u-line, h6.asym-u-line  { border-bottom-style: solid; }
+
+/* Text elements */
+a , a:link, a:visited { text-decoration: none; }
+a:hover, a:active { text-decoration: underline; }
+p.large { font-weight: bold; }
+blockquote { font-style: italic; border-left-style: solid; }
+em, q { font-style: italic; }
+strong { font-weight: bold; }
+dfn { font-weight: bold; font-style: italic; }
+code,samp,kbd { font-family: monospace; text-decoration: none; font-style: normal; }
+var,cite { font-style:italic; }
+del { text-decoration: line-through; }
+ins { text-decoration: underline; }
+sub { vertical-align: sub; }
+sup { vertical-align: super; }
+abbr, acronym { text-decoration: underline; cursor: help; }
+address { font-style: normal; }
+
+pre,tt { font-family: monospace; text-decoration: none; font-weight: normal; font-style: normal; }
+pre { white-space: pre; display:block; overflow-x:visible; overflow-y:hidden; border-style: solid; font-family: Monaco,"Courier New","DejaVu Sans Mono","Bitstream Vera Sans Mono",monospace; }
+
+/* Lists */
+ul, ul li { list-style: disc; }
+ol, ol li { list-style: decimal; }
+ul.large, ol.large { font-weight: bold; }
+ul.u-line li, ol.u-line li { list-style: none; border-top-style: solid; border-bottom-style: solid; }
+ul.u-line a { display:block; padding:0 1px; }
+ul.u-line a:hover, ul.u-line a:active { border:0; text-decoration:none;  }
+ul.dotted li, ol.dotted li { border-top:none; border-bottom-style: dotted; }
+dt { font-weight: bold; }
+ul.u-line li.first, ol.u-line li.first { border-top:0; }
+ul.u-line li.last, ol.u-line li.last { border-bottom:0; }
+
+ul.hr-nav-1, ul.hr-nav-2 { list-style:none; margin-bottom:0; }
+ul.hr-nav-1 li, ul.hr-nav-2 li { display:inline; margin:0; }
+ul.hr-nav-1 li.first, ul.hr-nav-2 li.first { padding-left:0; }
+ul.hr-nav-1 li.last, ul.hr-nav-2 li.last { padding-right:0; }
+ul.hr-nav-2 li { border-left-style:solid; }
+ul.hr-nav-2 li.first { border:none; }
+
+ul.arrow-list li { list-style:none; }
+
+/* Tables */
+table { width:100%; border-style: solid; }
+caption { text-align:left; font-weight:bold; }
+th, thead { font-weight:bold; text-align:center; }
+td, th { border-style: solid; }
+
+/* Images */
+img.alignright {float:right; margin-right:0; }
+img.alignleft { float:left; margin-left:0; }
+img.aligncenter {display: block; margin-left: auto; margin-right: auto}
+img.pad-border, img.pad-border-rev, div.caption-pad-border, div.caption-pad-border-rev { border-style:solid; }
+div.caption img { display:block; }
+
+/* Boxouts */
+div.alignright { float:right; margin-right:0; }
+div.alignleft { float:left; margin-left:0; }
+div.aligncenter {display: block; margin-left: auto; margin-right: auto; overflow:hidden; zoom:1; }
+div.pad-border, div.pad-border-rev { border-style:solid; }
+
+div.alignright table:last-child, div.alignleft table:last-child, div.aligncenter table:last-child,
+div.alignright p:last-child, div.alignleft p:last-child, div.aligncenter p:last-child,
+div.alignright ul:last-child, div.alignleft ul:last-child, div.aligncenter ul:last-child,
+div.alignright ol:last-child, div.alignleft ol:last-child, div.aligncenter ol:last-child
+{ margin-bottom:0; }
+
+/* Forms */
+
+.formel { overflow:hidden; zoom:1; }
+fieldset { display:block; }
+input, select, textarea, legend { display:inline; }
+textarea { overflow:auto; }
+input.radio, input.checkbox { vertical-align:text-top; }
+
+/* Miscelaneus styles */
+.no-margin-b { margin-bottom:0 !important; }
+.small-margin-b { margin-bottom:10px !important; }
+.block { display:block; }
+.loading { text-align:center; }
+a.image:hover, a.icon:hover  { border:0; }
+.align-right { text-align:right; }
+.align-left { text-align:left; }
+.align-center { text-align:center; }

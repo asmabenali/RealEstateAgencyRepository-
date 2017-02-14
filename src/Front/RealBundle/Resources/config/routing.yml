@@ -1,0 +1,48 @@
+front_real_visite:
+    resource: "@FrontRealBundle/Resources/config/routing/visite.yml"
+    prefix:   /visite
+
+front_real_ville:
+    resource: "@FrontRealBundle/Resources/config/routing/ville.yml"
+    prefix:   /ville
+
+front_real_offre:
+    resource: "@FrontRealBundle/Resources/config/routing/offre.yml"
+    prefix:   /offre
+
+front_real_media:
+    resource: "@FrontRealBundle/Resources/config/routing/media.yml"
+    prefix:   /media
+
+front_real_comptes:
+    resource: "@FrontRealBundle/Resources/config/routing/comptes.yml"
+    prefix:   /comptes
+
+
+front_real_homepage:
+    path:     /
+    defaults: { _controller: FrontRealBundle:Default:index }
+    
+front_real_liste:
+    path:     /liste/{type}
+    defaults: { _controller: FrontRealBundle:Default:liste }
+    
+front_real_contact:
+    path:     /contact
+    defaults: { _controller: FrontRealBundle:Default:contact }
+
+front_real_detail:
+    path:     /detail/{id}
+    defaults: { _controller: FrontRealBundle:Default:detail }
+    
+front_real_search:
+    path:     /recherche
+    defaults: { _controller: FrontRealBundle:Default:search }
+    
+front_real_avance:
+    path:     /search
+    defaults: { _controller: FrontRealBundle:Default:avance }
+    
+front_real_nous:
+    path:     /nous
+    defaults: { _controller: FrontRealBundle:Default:nous }

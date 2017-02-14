@@ -1,0 +1,227 @@
+{% extends "FrontRealBundle::layout.html.twig" %}
+
+{% block titre %} Accueil {% endblock %}
+{% block css %}<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">{% endblock %}
+{% block container %}
+
+    <!-- Main document body -->
+
+    <div class="doc-bd" id="doc-bd">
+
+        <div class="b12" id="main-slider-block"><!-- slider -->
+            <div class="u12">
+
+                <div class="mod slider" id="slider-main">
+                    <b class="top"></b>
+                    <div class="inner slider-inner">
+                        <div class="slides">
+                            {% for entity in entities %}
+                                {% if(loop.index <= 6 )%}
+                                    <div class="slide" id="slide-1">
+
+                                        <div class="mod mod-cols-clean">
+                                            <div class="inner">
+                                                <div class="bd cols-2">
+                                                    <div class="col col-1"><div class="col-inner">
+                                                            <div class="mod">
+                                                                <div class="inner">
+                                                                    <div class="hd">
+                                                                        <h3 class="no-margin-b">{{entity.nature}} {{entity.typeimmob}}</h3>
+                                                                        <h4> à {{entity.ville.ville}}</h4></div>
+                                                                    <div class="bd cols-2">
+                                                                        <div class="col">
+                                                                            <div class="col-inner">
+                                                                                <ul>
+                                                                                    <li><b>Prix : </b>{{ entity.prix |number_format(2, '.', ',') }}</li>
+                                                                                    {% if(entity.nbrpiece != null) %} <li><b>Appartement </b>S+{{ entity.nbrpiece}} - {{ entity.etage}}</li> {% endif %}
+                                                                                    {% if(entity.surfaceCouverte != null) %} <li><b>Surface : </b>{{ entity.surfaceCouverte}}</li> {% endif %}
+
+                                                                                    {% if(entity.superficie != null) %} <li><b>Superficie : </b>S+{{ entity.superficie}}</li> {% endif %}
+                                                                                </ul>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col"><div class="col-inner">
+                                                                                <ul>
+                                                                                    {% if(entity.gazdeville != null) %} <li><b>Gaz de Ville</b></li> {% endif %}
+                                                                                    {% if(entity.jardin != null) %} <li><b>Jardin</b></li> {% endif %}
+                                                                                    {% if(entity.chauffage != null) %} <li><b>Chauffage</b></li> {% endif %}
+                                                                                    {% if(entity.meuble != null) %} <li><b>Meuble</b></li> {% endif %}
+                                                                                    {% if(entity.climatisation != null) %} <li><b>Climatisé</b></li> {% endif %}
+
+                                                                                </ul>
+                                                                            </div></div>
+
+                                                                    </div>
+                                                                    <div class="ft">
+                                                                        <p><a href="{{path('front_real_detail',{'id':entity.idOffre})}}" class="jbtn jbtn-medium-normal jbtn-inset">Plus de détails</a></p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div></div>
+                                                    <div class="col col-2"><div class="col-inner">
+                                                            <img src="{{ asset('img/offre/'~entity.url~'')}}" alt="" class="block" width="540" height="290" />
+                                                        </div></div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div><!-- /#slide-1 -->
+                                {% endif %}
+                            {% endfor %}
+                        </div>
+                    </div>
+                    <b class="bottom"></b>
+                </div>
+
+            </div>
+        </div><!-- / slider -->
+
+
+
+
+        <div class="b12"><div class="u12"><b class="block-separator"></b></div></div>
+
+
+        <div class="b12"><!-- 2 columns - bevel -->
+            <div class="u4">
+
+                <div class="mod mod-bevel mod-bevel-light talk">
+                    <div class="inner">
+                        <div class="bd">
+                            <p class="small">La recherche d’un bien immobilier demande beaucoup d’énergie et de temps. Internet permet d’opérer une sélection en amont, n’hésitez pas à vous rapprocher de notre agence immobiliére pour compléter les informations.</p>
+                        </div>
+                        <div class="ft"><p class="author small">conseils pour bien sélectionner son agent immobilier</p></div>
+                    </div>
+                </div>
+
+                <div class="mod mod-bevel mod-bevel-light talk">
+                    <div class="inner">
+                        <div class="bd">
+                            <p class="small"> Le succès de l’opération repose en grande partie sur l’état du marché mais pas seulement. La qualité de la relation que vous établissez avec votre conseiller est très utile pour avoir des propositions en avant-première. </p>
+                        </div>
+                        <div class="ft"><p class="author small">Établissez un lien de confiance</p></div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="u8">
+                <form method="post" action="{{ path("front_real_avance")}}" >
+                    <div class="mod mod-bevel mod-bevel-light">
+                        <div class="inner">
+                            <div class="bd">
+                                <h2 style="color : #2a4878;">Recherche Avancée</h2>
+
+                                <label ><input  type="radio" value="louer" name="nature" class="radio" checked="checked" >A Louer </label>
+                                <label ><input  type="radio" value="vendre" name="nature" class="radio" >A Vendre </label>
+
+                                <div style="margin-top: 10px">
+                                    <b style="font-size: 12px">Type d'immeuble : </b>
+                                    <div style="margin-top: 10px">
+                                        <label><input type="checkbox" name="type1" value="appartement" class="checkbox"> Appartement</label>
+                                        <label><input type="checkbox" name="type2" value="immeuble" class="checkbox"> Immeuble</label>
+                                        <label><input type="checkbox" name="type3" value="terrain" class="checkbox"> Terrain</label>
+                                        <label><input type="checkbox" name="type4" value="villa" class="checkbox"> Villa</label>
+                                    </div>
+                                    <div style="margin-top: 10px">
+                                        <label><input type="checkbox" name="s1" value="1" class="checkbox"> S+1</label>
+                                        <label><input type="checkbox" name="s2" value="2" class="checkbox"> S+2</label>
+                                        <label><input type="checkbox" name="s3" value="3" class="checkbox"> S+3</label>
+                                        <label><input type="checkbox" name="s4" value="4" class="checkbox"> S+4</label>
+                                    </div>
+                                </div>
+                                <div style="margin-top: 10px">
+                                    <b style="font-size: 12px">Ville : </b>
+
+                                    <select style="padding: 2px !important; width: 150px;" name="ville" >
+                                        {% for ville in villes%}
+                                            <option value="{{ville.ville}}">{{ville.ville}}</option>
+                                        {% endfor %}
+                                    </select>
+
+                                </div>
+                                <div style="margin-top: 10px">
+                                    <p>
+                                        <label for="amount">Prix :</label>
+                                        <input type="text" id="amount" readonly style="border:0; color:#000; background-color: #efefef;">
+                                        <input type="hidden" id="prix1" name="prix1"/>
+                                        <input type="hidden" id="prix2" name="prix2"/>
+                                    </p>
+
+                                    <div id="slider-range"></div>
+
+                                </div>
+
+                                <div style="margin-top: 10px; float: right">
+
+                                    <input type="submit" class="jbtn jbtn-small-normal jbtn-margin" value="Rechercher" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div><!-- / 2 columns - bevel -->
+
+        <div class="b12"><div class="u12"><b class="block-separator"></b></div></div>
+
+        <div class="b12"><!-- 3 columns - clean -->
+            {% for entity in entities %}
+                {% if (loop.index <= 6) %}
+                    <div class="u4">
+
+                        <div class="mod mod-clean">
+                            <div class="inner">
+                                <div class="bd">
+                                    <h3><a href="{{path('front_real_detail',{'id':entity.idOffre})}}" style="color: #000;">{{entity.nature}} {{entity.typeimmob}}</a></h3>
+                                    <a href="{{path('front_real_detail',{'id':entity.idOffre})}}">
+                                        <img src="{{ asset('img/offre/'~entity.url~'')}}" alt="" class="aligncenter pad-border pad-light" width="280" style="  height: 177px;" />
+                                    </a>
+                                    <!--<p>{{ entity.description|truncate(50, true) }}</p>-->
+                                    <ul class="arrow-list">
+                                        <li><b>Date : </b>{{ entity.datepublication|date('d/m/y') }}</li>
+                                        <li><b>Prix : </b>{{ entity.prix |number_format(2, '.', ',') }}</li>
+
+
+                                    </ul>
+                                    <a href="{{path('front_real_detail',{'id':entity.idOffre})}}" class="jbtn jbtn-small-normal jbtn-margin-small">Plus de détails</a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                {% endif %}
+            {% endfor %}
+
+        </div><!-- / 3 columns -->
+
+
+    </div><!-- / #doc-bd -->
+
+{% endblock %}
+
+{% block js %}
+    
+        <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <script>
+       $(function () {
+          
+            $("#slider-range").slider({
+                range: true,
+                min: 0,
+                max: 9999,
+                values: [0, 1000],
+                slide: function (event, ui) {
+                    $("#amount").val(ui.values[ 0 ] + " Dt - " + ui.values[ 1 ]+" Dt");
+                    $("#prix1").val(ui.values[ 0 ]);
+                    $("#prix2").val(ui.values[ 1 ]);
+                }
+            });
+             alert('asma');
+            $("#amount").val("0 Dt - 1000 Dt");
+            
+            $("#prix1").val($("#slider-range").slider("values", 0));
+            $("#prix2").val($("#slider-range").slider("values", 1));
+           
+        });
+    </script>
+{% endblock %}

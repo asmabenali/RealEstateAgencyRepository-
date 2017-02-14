@@ -1,0 +1,66 @@
+Visite:
+    type: entity
+    table: visite
+    indexes:
+        id_offre:
+            columns:
+                - id_offre
+        id_gerant:
+            columns:
+                - id_gerant
+        id_client:
+            columns:
+                - id_client
+    id:
+        idVisite:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            column: id_visite
+            generator:
+                strategy: IDENTITY
+    fields:
+        dateDde:
+            type: date
+            nullable: true
+            comment: ''
+            column: date_dde
+        etat:
+            type: boolean
+            nullable: true
+            comment: ''
+        confirmation:
+            type: boolean
+            nullable: true
+            comment: ''
+    manyToOne:
+        idClient:
+            targetEntity: Comptes
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                id_client:
+                    referencedColumnName: id_compte
+            orphanRemoval: false
+        idGerant:
+            targetEntity: Comptes
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                id_gerant:
+                    referencedColumnName: id_compte
+            orphanRemoval: false
+        idOffre:
+            targetEntity: Offre
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                id_offre:
+                    referencedColumnName: id_offre
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

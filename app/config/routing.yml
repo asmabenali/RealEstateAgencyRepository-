@@ -1,0 +1,4 @@
+front_real:
+    resource: "@FrontRealBundle/Resources/config/routing.yml"
+    prefix:   /
+

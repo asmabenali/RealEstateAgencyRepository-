@@ -1,0 +1,65 @@
+Comptes:
+    type: entity
+    table: comptes
+    id:
+        idCompte:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            column: id_compte
+            generator:
+                strategy: IDENTITY
+    fields:
+        nom:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: ''
+        prenom:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: ''
+        pwd:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: ''
+        mail:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: ''
+        tel:
+            type: string
+            nullable: true
+            length: 50
+            fixed: false
+            comment: ''
+        agence:
+            type: string
+            nullable: true
+            length: 50
+            fixed: false
+            comment: ''
+        type:
+            type: string
+            nullable: false
+            length: 20
+            fixed: false
+            comment: ''
+    manyToMany:
+        idOffre:
+            targetEntity: Offre
+            cascade: {  }
+            mappedBy: idCompte
+            inversedBy: null
+            joinTable: null
+            orderBy: null
+    lifecycleCallbacks: {  }

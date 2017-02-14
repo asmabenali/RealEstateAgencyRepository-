@@ -1,0 +1,231 @@
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Real Estate Agency - {%block titre %} {% endblock %}</title>
+
+
+{% block css %}{% endblock %}
+<link rel="stylesheet" type="text/css" media="all" href="{{ asset('pragma/css/reset.css')}}" />
+<link rel="stylesheet" type="text/css" media="all" href="{{ asset('pragma/css/base.css') }}"/>
+<link rel="stylesheet" type="text/css" media="all" href="{{ asset('pragma/css/base_sizes_px_B10_F12_L20.css')}}" />
+<link rel="stylesheet" type="text/css" media="all" href="{{ asset('pragma/css/grid.css')}}" />
+<link rel="stylesheet" type="text/css" media="all" href="{{ asset('css/template.css')}}" />
+<link rel="stylesheet" type="text/css" media="all" href="{{ asset('css/template-colors.css')}}" />
+
+</head>
+<body>
+
+<div class="doc full-w full-h" id="doc">
+
+  <!-- Header -->
+
+  <div class="doc-hd" id="doc-hd-upper">
+    <div class="b12">
+      <div class="u12">
+
+        <div class="mod mod-clean" id="second-top-nav">
+          <div class="inner">
+            <ul class="small r-align hr-nav-1">
+              <!--<li class="first"><a href="#">Get RSS feed</a> <a href="#" class="icon"><img src="{{ asset('img/icons/RSS_16_16.png')}}" alt="" /></a> </li>-->
+              <li class="last"><a href="#">Follow us on Facebook</a> <a href="#" class="icon"><img src="{{ asset('img/icons/facebook-16.png')}}" alt="" /></a></li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div><!-- / #doc-hd-upper -->
+
+  <div class="doc-hd " id="doc-hd-lower">
+    <div class="b12">
+      <div class="u6">
+        <div class="mod" id="branding">
+          <div class="inner">
+            <h1 class="no-margin-b"><a href="index.html"><img src="{{ asset('img/content/logo.png')}}" alt="SquareMile Business Site Template" /></a></h1>
+          </div>
+        </div>
+      </div>
+      <div class="u6">
+        <div class="mod" id="search">
+          <div class="inner">
+              <form id="search-form" action="{{ path('front_real_search') }}" method="post">
+                <div><input style="height: 29px;" name="mot" maxlength="35" type="text" id="search-field" value="Recherche < mot cle >" class="text" onclick="value=''" /></div>
+              <div><input class="submit" type="submit" value="search" id="search-btn" /></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="b12">
+      <div class="u12">
+
+        <div class="mod mod-clean main-nav main-nav-root" id="main-nav">
+          <div class="inner">
+            <ul class="root">
+              <li class="root-item root-item-first current"><a href="{{ path('front_real_homepage')}}" class="root">Accueil</a></li>
+              
+              <!-- <li class="root-item"><a href="portfolio-overview.html" class="root">Portfolio</a>
+                <ul class="sub sub-lev-1">
+                  <li class="sub-item sub-lev-1-item first"><a href="portfolio.html">Portfolio</a></li>
+                  <li class="sub-item sub-lev-1-item"><a href="portfolio-gallery.html">Portfolio gallery</a></li>
+                  <li class="sub-item sub-lev-1-item last"><a href="portfolio-single.html">Portfolio single</a></li>
+                </ul>
+              </li>-->
+              
+              <li class="root-item"><a href="qsdqs.html" class="root">Offre</a>
+                <ul class="sub sub-lev-1">
+                  <li class="sub-item sub-lev-1-item first"><a href="{{ path('front_real_liste',{'type' : 'appartement'})}}">Appartement</a></li>
+                  <li class="sub-item sub-lev-1-item"><a href="{{ path('front_real_liste',{'type' : 'villa'})}}">Villa</a></li>
+                   <li class="sub-item sub-lev-1-item"><a href="{{ path('front_real_liste',{'type' : 'terrain'})}}">Terrain</a></li>
+                   <li class="sub-item sub-lev-1-item last"><a href="{{ path('front_real_liste',{'type' : 'immeuble'})}}">Immeuble</a></li>
+                </ul>
+              </li>
+              
+             <li class="root-item root-item-last"><a href="{{ path('front_real_nous')}}" class="root">Qui Sommes Nous ?</a></li>
+              <li class="root-item root-item-last"><a href="{{ path('front_real_contact')}}" class="root">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div><!-- / #doc-hd-lower -->
+  
+  {% block container %} {% endblock %}
+
+  <!-- Footer -->
+
+  <!--<div class="doc-ft" id="doc-ft-upper">
+    <div class="b16">
+      <div class="u6">
+
+        <div class="mod mod-bevel hd-bar twitter-box">
+          <div class="inner">
+            <div class="hd">
+              <h3>Recent tweets</h3>
+              <a href="http://twitter.com/studiomw" class="jbtn jbtn-small-neutral jbtn-margin-small jfollow-btn">Follow us</a>
+            </div>
+            <div class="bd">
+              <ul class="u-line small no-margin-b">
+                <li class="first">Lorem ipsum dolor sit amet, consectetur adipiscing elit, vitae sit amet metus. <a href="#">Pellentesque habitant</a> morbi tristique senectus et netus.</li>
+                <li>Etiam sapien ante, porttitor sit amet eleifend nec, scelerisque eu metus. <a href="#">Etiam sed mi ligula</a></li>
+                <li class="last">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac egestas.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="u3">
+
+        <div class="mod">
+          <div class="inner">
+            <h4 class="asym-u-line">Navigation</h4>
+            <ul class="u-line arrow-list-links">
+              <li class="first"><a href="index.html">Home</a></li>
+              <li><a href="portfolio.html">Portfolio</a></li>
+              <li><a href="blog.html">Blog</a></li>
+              <li><a href="templates.html">Templates</a></li>
+              <li><a href="framework.html">Framework</a></li>
+              <li class="last"><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+      <div class="u3">
+
+        <div class="mod">
+          <div class="inner">
+            <h4 class="asym-u-line">Templates</h4>
+            <ul class="u-line">
+              <li class="first"><a href="index.html">Home</a></li>
+              <li><a href="portfolio.html">Portfolio</a></li>
+              <li><a href="blog.html">Blog</a></li>
+              <li><a href="templates.html">Templates</a></li>
+              <li><a href="framework.html">Framework</a></li>
+              <li class="last"><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+      <div class="u4">
+
+        <div class="mod">
+          <div class="inner align-center">
+            <a href="index.html"><img src="{{ asset('img/content/logo-footer.png')}}" alt="" style="margin-bottom:5px" /></a>
+            <p>Created by <a href="http://studiomw.co.uk/"><img src="{{ asset('img/content/studiomw-logo.png')}}" alt="" style="vertical-align:-25%" /></a></p>
+            <a href="#" class="jbtn jbtn-large-neutral jbtn-margin-small jbtn-fullwidth"><span style="display:block;margin-top:-5px"><img src="{{ asset('img/icons/themeforest_32_32.png')}}" alt="" style="vertical-align:middle" /> Buy now<br/>on ThemeForest</span></a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div><!-- / #doc-ft-upper -->
+
+  <div class="doc-ft" id="doc-ft-lower">
+    <div class="b12">
+      <div class="u6">
+
+        <div class="mod mod-clean">
+          <div class="inner">
+            <p class="small">Copyright &copy; Esprit 2015, All Rights Reserved</p>
+          </div>
+        </div>
+
+      </div>
+      <div class="u6">
+
+        <div class="mod mod-clean">
+          <div class="inner">
+            <p class="small r-align">Real Estate Agency</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div><!-- / #doc-ft-lower -->
+
+</div><!-- / #doc -->
+<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+
+
+<script type="text/javascript" src="{{ asset('pragma/js/jquery-plugins.js')}}"></script>
+<script src="{{ asset('pragma/js/cufon-yui.js')}}" type="text/javascript"></script>
+<script src="{{ asset('pragma/js/fonts/M_Plus_2c_bold_700.font.js')}}" type="text/javascript"></script>
+<script src="{{ asset('pragma/js/fonts/M_Plus_2c_medium_500.font.js')}}" type="text/javascript"></script>
+<script type="text/javascript" src="{{ asset('js/global.js')}}"></script>
+<script type="text/javascript" src="{{ asset('color-rotator/jquery.meerkat.js')}}"></script>
+<script type="text/javascript" src="{{ asset('color-rotator/selectcolor.js')}}"></script>
+<script type="text/javascript" src="{{ asset('js/contact-form.js')}}"></script>
+
+<script type="text/javascript">
+
+// Main slider
+$('#slider-main').pragmaSlider({
+  sliderHeight: 'fixed',    // Set the slider hight to a fixed size
+  sliderHeightFixed: 290,   // the sider height in pixels, useful only if sliderHeight is set to 'fixed'
+  autoSlide: true,          // Set auto-slide to active
+  autoSlideSpeed: 3500,     // time interval between 2 slides when using auto-slide
+  slideSpeed: 1000          // the time of the slide change animation in miliseconds
+});
+
+</script>
+
+{% block js %} {% endblock %}
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v2.3";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+</body>
+</html>

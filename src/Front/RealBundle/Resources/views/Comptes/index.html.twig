@@ -1,0 +1,53 @@
+{% extends '::base.html.twig' %}
+
+{% block body -%}
+    <h1>Comptes list</h1>
+
+    <table class="records_list">
+        <thead>
+            <tr>
+                <th>Idcompte</th>
+                <th>Nom</th>
+                <th>Prenom</th>
+                <th>Pwd</th>
+                <th>Mail</th>
+                <th>Tel</th>
+                <th>Agence</th>
+                <th>Type</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for entity in entities %}
+            <tr>
+                <td><a href="{{ path('comptes_show', { 'id': entity.idCompte }) }}">{{ entity.idCompte }}</a></td>
+                <td>{{ entity.nom }}</td>
+                <td>{{ entity.prenom }}</td>
+                <td>{{ entity.pwd }}</td>
+                <td>{{ entity.mail }}</td>
+                <td>{{ entity.tel }}</td>
+                <td>{{ entity.agence }}</td>
+                <td>{{ entity.type }}</td>
+                <td>
+                <ul>
+                    <li>
+                        <a href="{{ path('comptes_show', { 'id': entity.idCompte }) }}">show</a>
+                    </li>
+                    <li>
+                        <a href="{{ path('comptes_edit', { 'id': entity.idCompte }) }}">edit</a>
+                    </li>
+                </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+        <ul>
+        <li>
+            <a href="{{ path('comptes_new') }}">
+                Create a new entry
+            </a>
+        </li>
+    </ul>
+    {% endblock %}

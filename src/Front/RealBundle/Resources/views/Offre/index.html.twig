@@ -1,0 +1,73 @@
+{% extends '::base.html.twig' %}
+
+{% block body -%}
+    <h1>Offre list</h1>
+
+    <table class="records_list">
+        <thead>
+            <tr>
+                <th>Idoffre</th>
+                <th>Nature</th>
+                <th>Typeimmob</th>
+                <th>Prix</th>
+                <th>Superficie</th>
+                <th>Nbrpiece</th>
+                <th>Datepublication</th>
+                <th>Etage</th>
+                <th>Surfacecouverte</th>
+                <th>Nbrsalledb</th>
+                <th>Gazdeville</th>
+                <th>Jardin</th>
+                <th>Chauffage</th>
+                <th>Meuble</th>
+                <th>Climatisation</th>
+                <th>Note</th>
+                <th>Description</th>
+                <th>Url</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for entity in entities %}
+            <tr>
+                <td><a href="{{ path('offre_show', { 'id': entity.idOffre }) }}">{{ entity.idOffre }}</a></td>
+                <td>{{ entity.nature }}</td>
+                <td>{{ entity.typeimmob }}</td>
+                <td>{{ entity.prix }}</td>
+                <td>{{ entity.superficie }}</td>
+                <td>{{ entity.nbrpiece }}</td>
+                <td>{% if entity.datepublication %}{{ entity.datepublication|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>{{ entity.etage }}</td>
+                <td>{{ entity.surfaceCouverte }}</td>
+                <td>{{ entity.nbrSalleDb }}</td>
+                <td>{{ entity.gazdeville }}</td>
+                <td>{{ entity.jardin }}</td>
+                <td>{{ entity.chauffage }}</td>
+                <td>{{ entity.meuble }}</td>
+                <td>{{ entity.climatisation }}</td>
+                <td>{{ entity.note }}</td>
+                <td>{{ entity.description }}</td>
+                <td>{{ entity.url }}</td>
+                <td>
+                <ul>
+                    <li>
+                        <a href="{{ path('offre_show', { 'id': entity.idOffre }) }}">show</a>
+                    </li>
+                    <li>
+                        <a href="{{ path('offre_edit', { 'id': entity.idOffre }) }}">edit</a>
+                    </li>
+                </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+        <ul>
+        <li>
+            <a href="{{ path('offre_new') }}">
+                Create a new entry
+            </a>
+        </li>
+    </ul>
+    {% endblock %}

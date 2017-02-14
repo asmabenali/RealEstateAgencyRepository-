@@ -1,0 +1,184 @@
+{% extends "FrontRealBundle::layout.html.twig" %}
+
+{% block titre %} {{entity.typeimmob}} - {{entity.idOffre}} {% endblock %}
+
+{% block container %}
+    <div class="doc-bd" id="doc-bd">
+
+        <div class="b12" id="content">
+            <div class="u8" id="post-block">
+
+                <div class="mod mod-bevel mod-bevel-med breadcrumb" id="breadcrumb">
+                    <div class="inner">
+                        <div class="bd">
+                            <ul class="font-narrow">
+                                <li class="first"><a href="{{ path('front_real_homepage')}}">Accueil</a></li>
+                                <li class="first"><a href="{{ path('front_real_liste',{'type' : entity.typeimmob })}}">{{entity.typeimmob}}</a></li>
+                                <li class="last"><a href="{{path('front_real_detail',{'id':entity.idOffre})}}">{{entity.typeimmob}} - {{entity.idOffre}}</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div><!-- / #breadcrumb -->
+
+                <div class="mod mod-bevel mod-bevel-light" id="post">
+                    <div class="inner">
+                        <div class="bd h-asym">
+
+                            <h1>{{entity.nature}} à {{entity.ville.ville}}</h1>
+
+                            <div class="post-meta">
+                                <b class="content-separator"></b>
+                                <ul class="hr-nav-1 small">
+                                    <li class="first date"><a href="#">{{ entity.datepublication|date('d/m/y') }}</a></li>
+                                    <li class="author">Membre : <a href="#">{{entity.idUser.nom}} {{entity.idUser.prenom}}</a></li>
+                                    <li class="category">Categorie : <a href="#">{{entity.typeimmob}}</a></li>
+                                    <li class="comments last"><fb:comments-count href="http://localhost/{{path('front_real_detail',{'id':entity.idOffre})}}"/></fb:comments-count> Commentaires
+                                    </li>
+                                </ul>
+                                <b class="content-separator"></b>
+                            </div>
+
+                            <img src="{{ asset('img/offre/'~entity.url~'')}}" alt="" class="alignleft pad-border" width="580" height="200" />
+                            <div class="fb-like" data-href="{{path('front_real_detail',{'id':entity.idOffre})}}" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>
+                            <h3>Description:</h3>
+                            <p>{{entity.description}}</p>
+                            <h3>Détails:</h3>
+
+                            <ul class="arrow-list">
+                                <li><b>Prix : </b>{{ entity.prix |number_format(2, '.', ',') }}</li>
+                                {% if(entity.nbrpiece != null) %} <li><b>Appartment </b>S+{{ entity.nbrpiece}} - {{ entity.etage}}</li> {% endif %}
+                                {% if(entity.surfaceCouverte != null) %} <li><b>Surface : </b>{{ entity.surfaceCouverte}}</li> {% endif %}
+                                
+                                {% if(entity.superficie != null) %} <li><b>Superficie : </b>S+{{ entity.superficie}}</li> {% endif %}
+                                {% if(entity.gazdeville != null) %} <li><b>Gaz de Ville</b></li> {% endif %}
+                                {% if(entity.jardin != null) %} <li><b>Jardin</b></li> {% endif %}
+                                {% if(entity.chauffage != null) %} <li><b>Chauffage</b></li> {% endif %}
+                                {% if(entity.meuble != null) %} <li><b>Meuble</b></li> {% endif %}
+                                {% if(entity.climatisation != null) %} <li><b>Climatisé</b></li> {% endif %}
+                                
+                            </ul>
+
+
+                            <div class="mod mod-bevel mod-bevel-med2 mod-fullwidth author-box" id="author">
+                                <div class="inner">
+                                    <div class="content">
+                                        <h4>Publié par {{entity.idUser.nom}} {{entity.idUser.prenom}}</h4>
+                                        <ul>
+                                            <li><b>Email : </b>{{entity.idUser.mail}}</li>
+                                            <li><b>Téléphone : </b>{{entity.idUser.tel}}</li>
+                                        </ul>
+                                    </div>
+                                    <img src="{{ asset('img/content/author.png')}}" alt="" class="author-photo alignleft pad-border-rev" />
+                                </div>
+                            </div><!-- / #author -->
+                            <div class="fb-comments" data-href="http://localhost/{{path('front_real_detail',{'id':entity.idOffre})}}" data-numposts="5" data-colorscheme="dark" data-width="100%"></div>
+                        </div><!-- / .bd -->
+                    </div><!-- / .inner -->
+                </div><!-- / #post -->
+
+            </div><!-- / #post-block -->
+
+
+            <div class="u4" id="sidebar">
+
+                <div class="mod mod-bevel mod-bevel-dark">
+                    <div class="inner align-center">
+                        <div class="bd">
+                            <p>This is a live demo of <br/> the <strong>SquareMile</strong> HTML template <br/>created by <a href="http://studiomw.co.uk/"><img src="img/content/studiomw-logo.png" alt="" style="vertical-align:-25%" /></a></p>
+                            <a href="#" class="jbtn jbtn-medium-normal jbtn-inset jbtn-margin-small">Buy now on ThemeForest</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mod mod-bevel mod-bevel-med">
+                    <div class="inner">
+                        <div class="bd">
+                            <h4 class="u-line">Advertisment</h4>
+                            <ul class="advertising">
+                                <li><a href="#"><img src="{{ asset('img/content/ad_125x125_v2.gif')}}" alt="" /></a></li>
+                                <li><a href="#"><img src="{{ asset('img/content/gr_125x125_v1.gif')}}" alt="" /></a></li>
+                                <li><a href="#"><img src="{{ asset('img/content/tf_125x125_v1.gif')}}" alt="" /></a></li>
+                                <li><a href="#"><img src="{{ asset('img/content/vh_125x125_3.gif')}}" alt="" /></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div> -->
+
+                <div class="mod mod-bevel mod-bevel-med">
+                    <div class="inner">
+                        <div class="bd">
+
+                            <div class="mod mod-bevel mod-bevel-med2 mod-fullwidth">
+                                <div class="inner">
+                                    <div class="bd">
+                                        <h3 class="u-line">Recent blog posts</h3>
+                                        <ul class="u-line arrow-list-links">
+                                            <li class="first"><a href="#">In hac habitasse platea dictumst.</a></li>
+                                            <li><a href="#">Sed id sem eget ante vulputate.</a></li>
+                                            <li><a href="#">Amet nibh massa, eget porta nibh.</a></li>
+                                            <li><a href="#">Morbi a nibh neque.</a></li>
+                                            <li><a href="#">Duis magna ante, sagittis aliquet.</a></li>
+                                            <li class="last"><a href="#">Posuere nec nunc.</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="mod mod-bevel mod-bevel-med2 mod-fullwidth">
+                                <div class="inner">
+                                    <div class="bd">
+                                        <h3 class="u-line">Popular posts</h3>
+                                        <ul class="u-line arrow-list-links">
+                                            <li class="first"><a href="#">In hac habitasse platea dictumst.</a></li>
+                                            <li><a href="#">Sed id sem eget ante tincidunt vulputate.</a></li>
+                                            <li><a href="#">Amet nibh massa. In platea dictumst.</a></li>
+                                            <li><a href="#">Morbi a nibh neque.</a></li>
+                                            <li><a href="#">Duis magna ante, sagittis aliquet pulvinar sed.</a></li>
+                                            <li class="last"><a href="#">Posuere nec nunc.</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="mod mod-bevel mod-bevel-med2 hd-bar mod-fullwidth">
+                                <div class="inner">
+                                    <div class="hd">
+                                        <h3>Our friends</h3>
+                                    </div>
+                                    <div class="bd">
+                                        <ul class="u-line arrow-list-links">
+                                            <li class="first"><a href="#">Platea dictumst</a></li>
+                                            <li><a href="#">Tincidunt vulputate</a></li>
+                                            <li><a href="#">Habitasse</a></li>
+                                            <li><a href="#">Morbi neque.</a></li>
+                                            <li><a href="#">Duis magna ante</a></li>
+                                            <li class="last"><a href="#">Posuere</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div> 
+
+            </div><!-- / #sidebar -->
+        </div><!-- / #content -->
+
+    </div><!-- / #doc-bd --> 
+
+{% endblock %}
+
+{% block js %}
+
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+
+
+        });
+
+
+    </script>
+
+{% endblock %}

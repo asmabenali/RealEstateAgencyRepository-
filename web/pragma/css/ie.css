@@ -1,0 +1,18 @@
+/* =================================================
+      Fixes for Internet Explorer - all versions
+   ================================================= */
+
+
+/* Forms */
+
+fieldset { padding-top:0; }
+legend { margin-bottom:10px; }
+input.radio, input.checkbox { vertical-align:middle; }
+select { *background:none; } /* only IE7 and below */
+
+.btn-small-normal, .btn-small-special, .btn-small-neutral { *margin-bottom:-7px; } /* only IE7 and below */
+.btn-medium-normal, .btn-medium-special, .btn-medium-neutral { *margin-bottom:-17px; } /* only IE7 and below */
+.btn-large-normal, .btn-large-special, .btn-large-neutral { *margin-bottom:-2px; } /* only IE7 and below */
+.btn-margin { margin-bottom:18px; }
+.btn-margin-small { margin-bottom:3px; }
+.btn-margin-small { *margin-bottom:8px; } /* only IE7 and below */

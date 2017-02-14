@@ -1,0 +1,152 @@
+Offre:
+    type: entity
+    table: offre
+    indexes:
+        offre_ibfk_1:
+            columns:
+                - id_user
+        fk_ville:
+            columns:
+                - ville
+    id:
+        idOffre:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            column: id_offre
+            generator:
+                strategy: IDENTITY
+    fields:
+        nature:
+            type: string
+            nullable: false
+            length: 20
+            fixed: false
+            comment: ''
+        typeimmob:
+            type: string
+            nullable: false
+            length: 20
+            fixed: false
+            comment: ''
+            column: typeImmob
+        prix:
+            type: float
+            nullable: false
+            precision: 10
+            scale: 0
+            comment: ''
+        superficie:
+            type: float
+            nullable: true
+            precision: 10
+            scale: 0
+            comment: ''
+        nbrpiece:
+            type: integer
+            nullable: true
+            unsigned: false
+            comment: ''
+            column: nbrPiece
+        datepublication:
+            type: date
+            nullable: true
+            comment: ''
+            column: datePublication
+        etage:
+            type: string
+            nullable: true
+            length: 50
+            fixed: false
+            comment: ''
+        surfaceCouverte:
+            type: float
+            nullable: true
+            precision: 10
+            scale: 0
+            comment: ''
+            column: surface_couverte
+        nbrSalleDb:
+            type: integer
+            nullable: true
+            unsigned: false
+            comment: ''
+            column: nbr_salle_db
+        gazdeville:
+            type: boolean
+            nullable: true
+            comment: ''
+            column: gazDeVille
+        jardin:
+            type: boolean
+            nullable: true
+            comment: ''
+        chauffage:
+            type: boolean
+            nullable: true
+            comment: ''
+        meuble:
+            type: boolean
+            nullable: true
+            comment: ''
+        climatisation:
+            type: boolean
+            nullable: true
+            comment: ''
+        note:
+            type: float
+            nullable: true
+            precision: 10
+            scale: 0
+            comment: ''
+        description:
+            type: string
+            nullable: true
+            length: 500
+            fixed: false
+            comment: ''
+        url:
+            type: string
+            nullable: false
+            length: 255
+            fixed: false
+            comment: ''
+    manyToOne:
+        idUser:
+            targetEntity: Comptes
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                id_user:
+                    referencedColumnName: id_compte
+            orphanRemoval: false
+        ville:
+            targetEntity: Ville
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                ville:
+                    referencedColumnName: ville
+            orphanRemoval: false
+    manyToMany:
+        idCompte:
+            targetEntity: Comptes
+            cascade: {  }
+            mappedBy: null
+            inversedBy: idOffre
+            joinTable:
+                name: note
+                joinColumns:
+                    -
+                        name: id_offre
+                        referencedColumnName: id_offre
+                inverseJoinColumns:
+                    -
+                        name: id_compte
+                        referencedColumnName: id_compte
+            orderBy: null
+    lifecycleCallbacks: {  }

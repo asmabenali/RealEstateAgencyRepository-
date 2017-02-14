@@ -1,0 +1,120 @@
+/* ========================
+    Absolute sizes
+   ======================== */
+
+body { font-size: 10px; line-height: 20px; }
+hr { height: 1px; margin-bottom: 19px; }
+b.hr { border-top-width: 1px; margin-bottom: 19px; }
+
+/* Headings */
+
+h1 { font-size: 32px; line-height: 40px; margin-bottom: 20px; }
+h2 { font-size: 25px; line-height: 40px; margin-bottom: 20px; }
+h3 { font-size: 20px; line-height: 40px; margin-bottom: 20px; }
+h4 { font-size: 15px; line-height: 20px; margin-bottom: 20px; }
+h5 { font-size: 12px; line-height: 20px; margin-bottom: 20px; }
+h6 { font-size: 10px; line-height: 20px; margin-bottom: 20px; }
+
+h1, h2, h3 { letter-spacing:-.25px }
+
+/* Headings - asymmetric */
+
+.h-asym h2, h2.asym { margin-bottom: 10px; padding-top: 10px; }
+.h-asym h3, h3.asym { margin-bottom: 8px; padding-top: 12px; }
+.h-asym h4, h4.asym { margin-bottom: 10px; padding-top: 10px; }
+.h-asym h5, h5.asym { margin-bottom: 10px; padding-top: 10px; }
+.h-asym h6, h6.asym { margin-bottom: 8px; padding-top: 12px; }
+
+/* Headings - underlined */
+
+h1.u-line { margin-bottom: 19px; padding-bottom: 8px; border-bottom-width: 3px; }
+h2.u-line { margin-bottom: 9px; padding-bottom: 9px; border-bottom-width: 2px; }
+h3.u-line { margin-bottom: 9px; padding-bottom: 9px; border-bottom-width: 2px; }
+h4.u-line { margin-bottom: 9px; padding-bottom: 9px; border-bottom-width: 2px; }
+h5.u-line { margin-bottom: 9px; padding-bottom: 9px; border-bottom-width: 2px; }
+h6.u-line { margin-bottom: 9px; padding-bottom: 9px; border-bottom-width: 2px; }
+
+/* Headings - asymmetric + underlined */
+
+.h-asym-u-line h2, h2.asym-u-line { margin-bottom: 0; padding-top: 10px; padding-bottom: 8px; border-bottom-width: 2px; }
+.h-asym-u-line h3, h3.asym-u-line { margin-bottom: 0; padding-top: 12px; padding-bottom: 6px; border-bottom-width: 2px; }
+.h-asym-u-line h4, h4.asym-u-line { margin-bottom: 0; padding-top: 10px; padding-bottom: 8px; border-bottom-width: 2px; }
+.h-asym-u-line h5, h5.asym-u-line { margin-bottom: 0; padding-top: 10px; padding-bottom: 8px; border-bottom-width: 2px; }
+.h-asym-u-line h6, h6.asym-u-line { margin-bottom: 0; padding-top: 12px; padding-bottom: 6px; border-bottom-width: 2px; }
+
+/* Headings - bars */
+
+h1.bar { padding-left: 10px; padding-right: 10px; }
+h2.bar { padding-left: 10px; padding-right: 10px; }
+h3.bar { padding-left: 10px; padding-right: 10px; }
+h4.bar { padding-left: 10px; padding-right: 10px; }
+h5.bar { padding-left: 10px; padding-right: 10px; }
+h6.bar { padding-left: 10px; padding-right: 10px; }
+
+/* Text elements */
+
+p { font-size: 12px; line-height: 20px; margin-bottom: 20px; }
+.large { font-size: 14px; line-height: 20px; margin-bottom: 20px; }
+.small { font-size: 10px; line-height: 20px; margin-bottom: 20px; }
+
+a:hover, a:active { border-bottom-width: 1px; }
+blockquote { padding-left: 20px; border-left-width: 10px; }
+
+big { font-size: 12.5px; }
+small, sub, sup { font-size: 7.5px; }
+
+pre { font-size: 11px; line-height: 20px; margin-bottom: 20px; padding: 19px; border-width: 1px; border-left-width: 10px; }
+
+/* Lists */
+
+ul,ol,dl { font-size: 12px; line-height: 20px; margin-bottom: 20px;  }
+ul ul, ul ol, ol ol, ol ul { font-size: 12px; margin-bottom: 0px; }
+li { padding-left: 0; margin-left: 30px;}
+dd { padding-left: 20px; margin-bottom: 20px;}
+ul.u-line li, ol.u-line li { line-height: 19px; margin: 0; border-bottom-width: 1px; border-top-width:1px; }
+ul.u-line-large li, ol.u-line-large li { line-height: 19px; margin: 0; border-bottom-width: 1px; border-top-width:1px; }
+ul.u-line-small li, ol.u-line-small li { line-height: 19px; margin: 0; border-bottom-width: 1px; border-top-width:1px; }
+ul.u-line a, ol.u-line a { padding-top:2px; padding-bottom:2px; }
+ul.hr-nav-1 li, ul.hr-nav-2 li { padding:0 1em; }
+ul.hr-nav-2 li { border-left-width:1px }
+ul.arrow-list li { padding-left:15px; margin-left:15px; }
+ul.arrow-list-links li { padding-left:0; margin-left:0; }
+ul.arrow-list-links li a { padding-left:15px }
+
+/* Tables */
+
+table { font-size: 12px; line-height: 20px; margin-bottom: 20px; border-width: 0px; }
+td, th { padding: 9px 9px 10px 9px; border-width: 1px; }
+
+/* Images */
+
+img.alignnone { margin: 20px; margin-top: 0; }
+img.alignright { margin-bottom: 20px; margin-left: 20px; margin-top:5px; }
+img.alignleft { margin-bottom: 20px; margin-right: 20px; margin-top:5px; }
+img.aligncenter { margin-bottom: 20px; }
+img.pad { padding: 10px; }
+img.pad-border { padding: 9px; border-width: 1px; }
+img.pad-border-rev { padding: 2px; border-width: 8px; }
+div.caption p { font-size: 10px; line-height: 20px; margin-bottom: 0; }
+
+/* Boxouts */
+
+div.alignnone { margin: 20px; margin-top: 0; }
+div.alignright { margin-bottom: 20px; margin-left: 20px; }
+div.alignleft { margin-bottom: 20px; margin-right: 20px; }
+div.aligncenter { margin-bottom: 20px; }
+div.pad { padding: 10px; }
+div.pad-border { padding: 9px; border-width: 1px; }
+div.pad-border-rev { padding: 2px; border-width: 8px; }
+
+/* Forms */
+
+label, .btn { font-size:12px; line-height:20px; }
+legend, input, textarea, select, option { font-size:12px; line-height:16px; }
+
+.formel { margin-bottom:15px; }
+label { margin-bottom: 5px; }
+fieldset { margin-bottom:15px; padding:10px 10px 0 10px; border-width:1px; }
+
+input.text, input.password, input.fileupload, textarea, select { padding:7px; border-width:1px; }
+input.radio, input.checkbox { margin-right:10px; }

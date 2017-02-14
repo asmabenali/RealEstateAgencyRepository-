@@ -1,0 +1,27 @@
+Media:
+    type: entity
+    table: media
+    id:
+        idMedia:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            column: id_media
+            generator:
+                strategy: IDENTITY
+    fields:
+        url:
+            type: string
+            nullable: false
+            length: 500
+            fixed: false
+            comment: ''
+        libelle:
+            type: string
+            nullable: false
+            length: 200
+            fixed: false
+            comment: ''
+    lifecycleCallbacks: {  }

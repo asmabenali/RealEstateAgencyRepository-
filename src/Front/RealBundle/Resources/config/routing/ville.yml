@@ -1,0 +1,30 @@
+ville:
+    path:     /
+    defaults: { _controller: "FrontRealBundle:Ville:index" }
+
+ville_show:
+    path:     /{id}/show
+    defaults: { _controller: "FrontRealBundle:Ville:show" }
+
+ville_new:
+    path:     /new
+    defaults: { _controller: "FrontRealBundle:Ville:new" }
+
+ville_create:
+    path:     /create
+    defaults: { _controller: "FrontRealBundle:Ville:create" }
+    requirements: { _method: post }
+
+ville_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "FrontRealBundle:Ville:edit" }
+
+ville_update:
+    path:     /{id}/update
+    defaults: { _controller: "FrontRealBundle:Ville:update" }
+    requirements: { _method: post|put }
+
+ville_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "FrontRealBundle:Ville:delete" }
+    requirements: { _method: post|delete }
